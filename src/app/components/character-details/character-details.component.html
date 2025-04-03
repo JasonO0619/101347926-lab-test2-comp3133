@@ -1,0 +1,38 @@
+<div class="details-container" *ngIf="character">
+    <button mat-button class="back-button" (click)="goBack()">
+      ⬅ Back to List
+    </button>
+
+    <h1 class="page-title">Hogwarts Character Details</h1>
+  
+    <mat-card class="details-card" [ngClass]="character.house?.toLowerCase()">
+      <img class="character-image" [src]="character.image" alt="{{ character.name }}" />
+  
+      <div class="details-info">
+        <h2>{{ character.name }}</h2>
+        <p><strong>House:</strong> {{ character.house || 'No House' }}</p>
+        <p><strong>Species:</strong> {{ character.species }}</p>
+        <p><strong>Wizard:</strong> {{ character.wizard ? 'Yes' : 'No' }}</p>
+        <p><strong>Ancestry:</strong> {{ character.ancestry || 'Unknown' }}</p>
+        <p><strong>Wand:</strong>
+          <br />
+          + Wood: {{ character.wand?.wood || 'N/A' }}<br />
+          + Core: {{ character.wand?.core || 'N/A' }}<br />
+          + Length: {{ character.wand?.length || 'N/A' }}
+        </p>
+        <p><strong>Actor:</strong> {{ character.actor || 'Unknown' }}</p>
+      </div>
+    </mat-card>
+  </div>
+
+  <div class="magic-particles">
+    <span
+      *ngFor="let p of particles"
+      [style.left]="p.left"
+      [style.width]="p.size"
+      [style.height]="p.size"
+      [style.animationDelay]="p.delay"
+      [style.animationDuration]="p.duration"
+    ></span>
+  </div>
+  

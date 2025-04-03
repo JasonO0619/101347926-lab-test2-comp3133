@@ -1,0 +1,91 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 16px;
+    padding: 10px;
+    justify-items: center;
+    
+  }
+  
+  .character-card {
+    width: 100%;
+    max-width: 400px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  .character-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .character-img {
+    width: 100px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .character-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .character-card.gryffindor { 
+    border-left: 6px solid #ae0001; 
+  }
+    .character-card.slytherin { 
+    border-left: 6px solid #2a623d; 
+  }
+    .character-card.ravenclaw { 
+    border-left: 6px solid #0e1a40;  
+  }
+    .character-card.hufflepuff { 
+    border-left: 6px solid #ecb939; 
+  }
+  
+  .magic-particles {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .magic-particles span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: float 10s linear infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-10vh) scale(1);
+      opacity: 0;
+    }
+  }

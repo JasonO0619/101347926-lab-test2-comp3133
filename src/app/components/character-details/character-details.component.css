@@ -1,0 +1,114 @@
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .page-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff8dc;
+  }
+
+  .back-button {
+    font-family: 'Cinzel', serif;
+    background-color: #f8f2dc;
+    border: 2px solid #ae0001;
+    color: #ae0001;
+    padding: 6px 14px;
+    transition: transform 0.2s;
+    margin-bottom: 15px;
+  }
+  .back-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .details-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: rgba(233, 213, 142, 0.95);
+    border-left: 6px solid transparent;
+    transition: border 0.3s ease;
+    padding: 24px;
+    position: relative;
+  }
+  .details-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+  }
+  
+  .gryffindor {
+    border-left-color: #ae0001;
+  }
+  .slytherin {
+    border-left-color: #2a623d;
+  }
+  .ravenclaw {
+    border-left-color: #0e1a40;
+  }
+  .hufflepuff {
+    border-left-color: #ecb939;
+  }
+  
+  .character-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .details-info p {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .details-info p strong {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+  
+  .details-container,
+  .details-info {
+  font-family: 'Cinzel', serif;
+}
+  
+.magic-particles {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.magic-particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}

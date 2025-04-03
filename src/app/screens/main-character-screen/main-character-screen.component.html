@@ -1,0 +1,12 @@
+<mat-toolbar color="blue" class="toolbar">
+    Harry Potter Characters
+  </mat-toolbar>
+  
+  <div class="filter-section">
+    <label class="filter-label">Select School:</label>
+    <app-character-filter (houseSelected)="onHouseSelected($event)"></app-character-filter>
+  </div>
+  
+  <div class="character-grid">
+    <app-characterlist [characters]="characters"></app-characterlist>
+  </div>

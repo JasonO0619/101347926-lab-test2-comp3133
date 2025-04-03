@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "101234567-lab-test2-comp3133": {
+    "101347926-lab-test2-comp3133": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/101234567-lab-test2-comp3133",
+            "outputPath": "dist/101347926-lab-test2-comp3133",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -59,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "101234567-lab-test2-comp3133:build:production"
+              "buildTarget": "101347926-lab-test2-comp3133:build:production"
             },
             "development": {
-              "buildTarget": "101234567-lab-test2-comp3133:build:development"
+              "buildTarget": "101347926-lab-test2-comp3133:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,6 +86,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -92,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1b66c8f7-8f47-4626-a8a0-7c991cb1e8ee"
   }
 }
